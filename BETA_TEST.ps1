@@ -1,9 +1,8 @@
-﻿#=====Начало меню №1 =====#
+#=====Начало меню №1 =====#
 ######################################
 Add-Type -Assembly system.windows.forms # класс для графического GUI
 Add-Type -AssemblyName System.Drawing
-
-#---------------------------------------------------Авторизация от Администратор-----------------------------------#
+ #---------------------------------------------------Авторизация от Администратор-----------------------------------#
 function Test-Admin {
     $currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
     $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
@@ -19,8 +18,7 @@ if ((Test-Admin) -eq $false)  {
 }
 
 
-#--------------------------------------------------- Начало меню окна №1 -----------------------------------#
-
+#---------------------------------------------------Начало меню окна №1-----------------------------------#
 #---------------------------------------------------Логика-----------------------------------#
 ######################################
 #####################################
@@ -56,6 +54,20 @@ $form2.Size = New-Object System.Drawing.Size(400,300)
 $form2.StartPosition = "CenterScreen"
 ######################################
 ######################################
+$form.KeyPreview = $True
+$form.Add_KeyDown({if ($_.KeyCode -eq "Enter") 
+    {
+    # if enter, perform click
+    $button.PerformClick()
+    }
+})
+$form.Add_KeyDown({if ($_.KeyCode -eq "Escape") 
+    {
+    # if escape, exit
+    $form.Close()
+    }
+})
+
 $button = New-Object System.Windows.Forms.Button
 $button.Size = New-Object System.Drawing.Size(200, 25)
 $button.Location = New-Object System.Drawing.Point(450,10)
@@ -262,8 +274,6 @@ Start-Process netplwiz
 $form1.Controls.Add($knopka10)
 ######################################
 ######################################
-
-
 
 
 
