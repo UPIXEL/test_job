@@ -57,14 +57,12 @@ $form2.StartPosition = "CenterScreen"
 $form.KeyPreview = $True
 $form.Add_KeyDown({if ($_.KeyCode -eq "Enter") 
     {
-    # if enter, perform click
-    $button.PerformClick()
+        $button.PerformClick()
     }
 })
 $form.Add_KeyDown({if ($_.KeyCode -eq "Escape") 
     {
-    # if escape, exit
-    $form.Close()
+        $form.Close()
     }
 })
 
