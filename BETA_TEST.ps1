@@ -57,12 +57,14 @@ $form2.StartPosition = "CenterScreen"
 $form.KeyPreview = $True
 $form.Add_KeyDown({if ($_.KeyCode -eq "Enter") 
     {
-        $button.PerformClick()
+    # if enter, perform click
+    $button.PerformClick()
     }
 })
 $form.Add_KeyDown({if ($_.KeyCode -eq "Escape") 
     {
-        $form.Close()
+    # if escape, exit
+    $form.Close()
     }
 })
 
@@ -263,7 +265,7 @@ $form1.Controls.Add($knopka9)
 ######################################
 $knopka10 = New-Object System.Windows.Forms.Button
 $knopka10.Size = New-Object System.Drawing.Point 100,50
-$knopka10.Location = New-Object System.Drawing.Point 480,10
+$knopka10.Location = New-Object System.Drawing.Point 480,260
 $knopka10.Text = 'Учетные записи пользователя'
 $knopka10.add_click{
 Start-Process netplwiz
@@ -272,9 +274,39 @@ Start-Process netplwiz
 $form1.Controls.Add($knopka10)
 ######################################
 ######################################
+$knopka11 = New-Object System.Windows.Forms.Button
+$knopka11.Size = New-Object System.Drawing.Point 100,50
+$knopka11.Location = New-Object System.Drawing.Point 480,10
+$knopka11.Text = 'Cвойства системы'
+$knopka11.add_click{
+Start-Process sysdm.cpl
 
+}
+$form1.Controls.Add($knopka11)
+######################################
+######################################
+$knopka12 = New-Object System.Windows.Forms.Button
+$knopka12.Size = New-Object System.Drawing.Point 100,50
+$knopka12.Location = New-Object System.Drawing.Point 480,210
+$knopka12.Text = 'Просмотр событий'
+$knopka12.add_click{
+Start-Process eventvwr.msc
 
+}
+$form1.Controls.Add($knopka12)
+######################################
+######################################
+$knopka13 = New-Object System.Windows.Forms.Button
+$knopka13.Size = New-Object System.Drawing.Point 100,50
+$knopka13.Location = New-Object System.Drawing.Point 480,310
+$knopka13.Text = 'Настройка сетевых подключений'
+$knopka13.add_click{
+Start-Process ncpa.cpl
 
+}
+$form1.Controls.Add($knopka13)
+######################################
+######################################
 
 
 
