@@ -199,7 +199,7 @@ $form.Controls.Add($knopka2)
 #########################################
 $knopka4 = New-Object System.Windows.Forms.Button
 $knopka4.Size = New-Object System.Drawing.Point 100,50
-$knopka4.Location = New-Object System.Drawing.Point 370,10
+$knopka4.Location = New-Object System.Drawing.Point 480,10
 $knopka4.Text = 'Файл hosts'
 $knopka4.add_click{
 Start-Process C:\Windows\System32\drivers\etc\hosts
@@ -210,7 +210,7 @@ $form1.Controls.Add($knopka4)
 ######################################
 $knopka5 = New-Object System.Windows.Forms.Button
 $knopka5.Size = New-Object System.Drawing.Point 100,50
-$knopka5.Location = New-Object System.Drawing.Point 480,110
+$knopka5.Location = New-Object System.Drawing.Point 110,10
 $knopka5.Text = 'Панель управления'
 $knopka5.add_click{
 Start-Process control
@@ -243,7 +243,7 @@ $form1.Controls.Add($knopka7)
 ######################################
 $knopka8 = New-Object System.Windows.Forms.Button
 $knopka8.Size = New-Object System.Drawing.Point 100,50
-$knopka8.Location = New-Object System.Drawing.Point 480,60
+$knopka8.Location = New-Object System.Drawing.Point 110,60
 $knopka8.Text = 'Управление компьютером'
 $knopka8.add_click{
 Start-Process compmgmt.msc
@@ -254,7 +254,7 @@ $form1.Controls.Add($knopka8)
 ######################################
 $knopka9 = New-Object System.Windows.Forms.Button
 $knopka9.Size = New-Object System.Drawing.Point 100,50
-$knopka9.Location = New-Object System.Drawing.Point 480,160
+$knopka9.Location = New-Object System.Drawing.Point 10,160
 $knopka9.Text = 'Реестр'
 $knopka9.add_click{
 Start-Process regedit
@@ -265,7 +265,7 @@ $form1.Controls.Add($knopka9)
 ######################################
 $knopka10 = New-Object System.Windows.Forms.Button
 $knopka10.Size = New-Object System.Drawing.Point 100,50
-$knopka10.Location = New-Object System.Drawing.Point 480,260
+$knopka10.Location = New-Object System.Drawing.Point 110,110
 $knopka10.Text = 'Учетные записи пользователя'
 $knopka10.add_click{
 Start-Process netplwiz
@@ -276,7 +276,7 @@ $form1.Controls.Add($knopka10)
 ######################################
 $knopka11 = New-Object System.Windows.Forms.Button
 $knopka11.Size = New-Object System.Drawing.Point 100,50
-$knopka11.Location = New-Object System.Drawing.Point 480,10
+$knopka11.Location = New-Object System.Drawing.Point 110,160
 $knopka11.Text = 'Cвойства системы'
 $knopka11.add_click{
 Start-Process sysdm.cpl
@@ -287,7 +287,7 @@ $form1.Controls.Add($knopka11)
 ######################################
 $knopka12 = New-Object System.Windows.Forms.Button
 $knopka12.Size = New-Object System.Drawing.Point 100,50
-$knopka12.Location = New-Object System.Drawing.Point 480,210
+$knopka12.Location = New-Object System.Drawing.Point 10,110
 $knopka12.Text = 'Просмотр событий'
 $knopka12.add_click{
 Start-Process eventvwr.msc
@@ -298,7 +298,7 @@ $form1.Controls.Add($knopka12)
 ######################################
 $knopka13 = New-Object System.Windows.Forms.Button
 $knopka13.Size = New-Object System.Drawing.Point 100,50
-$knopka13.Location = New-Object System.Drawing.Point 480,310
+$knopka13.Location = New-Object System.Drawing.Point 110,210
 $knopka13.Text = 'Настройка сетевых подключений'
 $knopka13.add_click{
 Start-Process ncpa.cpl
